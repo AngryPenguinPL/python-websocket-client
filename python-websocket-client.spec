@@ -65,10 +65,10 @@ mv %{buildroot}/%{_bindir}/wsdump.py \
     %{buildroot}/%{_bindir}/python3-wsdump
 
 # unbundle cacert
-rm %{buildroot}/%{python3_sitelib}/%{modname}/cacert.pem
+#rm %{buildroot}/%{python3_sitelib}/%{modname}/cacert.pem
 # And link in the mozilla ca
-ln -s /etc/pki/tls/cert.pem \
-    %{buildroot}/%{python3_sitelib}/%{modname}/cacert.pem
+#ln -s /etc/pki/tls/cert.pem \
+#    %{buildroot}/%{python3_sitelib}/%{modname}/cacert.pem
 
 # remove tests that got installed into the buildroot
 rm -rf %{buildroot}/%{python3_sitelib}/tests/
